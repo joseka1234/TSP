@@ -20,5 +20,8 @@ public class Main {
 		TSPInstance tsp = new TSPInstance();
 		tsp.calculaCamino();
 		tsp.muestraCamino();
+		System.out.println("");
+		tsp.aplica2Opt();
+		tsp.muestraCamino();
 	}
 }

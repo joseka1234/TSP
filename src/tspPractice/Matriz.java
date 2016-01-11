@@ -87,7 +87,7 @@ public class Matriz {
 	 * @throws JDOMException
 	 * @throws IOException
 	 */
-	public void inicializaMatriz(String file) throws FileNotFoundException, JDOMException, IOException {
+	private void inicializaMatriz(String file) throws FileNotFoundException, JDOMException, IOException {
 		int i = 0;
 		int j = 0;
 		

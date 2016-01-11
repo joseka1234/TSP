@@ -25,7 +25,7 @@ public class Step {
 	 */
 	@Override
 	public String toString() {
-		return getI() + ", " + getJ() + ", Cost: " + getCost();
+		return getI() + " to " + getJ() + ", Cost: " + getCost();
 	}
 	
 	//Getters y setters
