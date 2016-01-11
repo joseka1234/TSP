@@ -1,3 +1,12 @@
+/**
+@author José Carlos Rodríguez Cortés
+Class: Matriz.java
+@version 1.0.0
+Description: Clase que representa la matriz de distancias del TSP
+Date: 11 de ene. de 2016
+Contacto: alu0100766950@ull.edu.es
+Contacto2: joseka1234@gmail.com
+*/
 package tspPractice;
 
 import java.io.FileInputStream;
@@ -18,11 +27,21 @@ public class Matriz {
 	private int columnas;
 	private int filas;
 	
+	/**
+	 * Constructor por defecto
+	 */
 	public Matriz() {
 		setMatriz(null);
 		setColumnas(0);
 	}
 	
+	/**
+	 * Método que rellena la matriz de distancias basandose en la información extraida de un fichero XML
+	 * @param file nombre del fichero a analizar
+	 * @throws FileNotFoundException
+	 * @throws JDOMException
+	 * @throws IOException
+	 */
 	public void rellenaMatriz(String file) throws FileNotFoundException, JDOMException, IOException {
 		inicializaMatriz(file);
 		int i = 0;
@@ -61,6 +80,13 @@ public class Matriz {
 		setItem(getFilas() - 1, getColumnas() - 1, Double.MAX_VALUE);
 	}
 	
+	/**
+	 * Método que incializa la matriz de distancias basandose en la información extraída de un fichero XML
+	 * @param file nombre del fichero XML del que se extraerá la información
+	 * @throws FileNotFoundException
+	 * @throws JDOMException
+	 * @throws IOException
+	 */
 	public void inicializaMatriz(String file) throws FileNotFoundException, JDOMException, IOException {
 		int i = 0;
 		int j = 0;
@@ -74,7 +100,7 @@ public class Matriz {
 		
 		for(Element hijo : hijosRaiz) {
 			listaAuxiliar = hijo.getChildren();
-			for(Element coste : listaAuxiliar) {
+			for(int x = 0; x < listaAuxiliar.size(); x++) {
 				if(i == 0)
 					j++;
 			}
@@ -86,6 +112,7 @@ public class Matriz {
 		setMatriz(new double[getFilas()][getColumnas()]);
 	}
 	
+	//Getters y setters
 	public Double getItem(int i, int j) {
 		return getMatriz()[i][j];
 	}

@@ -1,3 +1,12 @@
+/**
+@author José Carlos Rodríguez Cortés
+Class: Main.java
+@version 1.0.0
+Description: Clase principal del programa del TSP
+Date: 11 de ene. de 2016
+Contacto: alu0100766950@ull.edu.es
+Contacto2: joseka1234@gmail.com
+*/
 package tspPractice;
 
 import java.io.FileNotFoundException;
