@@ -60,6 +60,7 @@ public class TSPInstance {
 	}
 
 	/**
+	 * TODO: Arreglar método 2OPT
 	 * Método que aplica 2Opt
 	 */
 	public void aplica2Opt() {
@@ -98,6 +99,7 @@ public class TSPInstance {
 	}
 
 	/**
+	 * TODO: Revisar la función de ganancia
 	 * Método que computa la ganancia de realizar un paso
 	 * 
 	 * @param i
